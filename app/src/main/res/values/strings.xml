@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Button-counter-Ferguson</string>
+    <string name="increment">Increment</string>
+    <string name="decrement">Decrement</string>
+    <string name="reset">Reset</string>
+    <string name="total">Total</string>
+
+</resources>
