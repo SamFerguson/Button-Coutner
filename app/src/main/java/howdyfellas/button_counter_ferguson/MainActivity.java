@@ -30,9 +30,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             if(savedInstanceState != null){
-                savedInstanceState.getInt(hooey);
+                counter = savedInstanceState.getInt(hooey);
             }
             setContentView(R.layout.activity_main);
+            count = (TextView) findViewById(R.id.count);
+            count.setText(getString(R.string.total)+ ": " + counter);
 
             AudioAttributes audioAttributes = new AudioAttributes.Builder()
                     .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             increment = (Button) findViewById(R.id.increment);
             decrement = (Button) findViewById(R.id.decrement);
             reset = (Button) findViewById(R.id.reset);
-            count = (TextView) findViewById(R.id.count);
+
 
 
             increment.setOnClickListener(new View.OnClickListener() {
